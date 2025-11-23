@@ -1,8 +1,6 @@
 local TweenService = game:GetService("TweenService")
 local UserInputService = game:GetService("UserInputService")
-local Players = game:GetService("Players")
-local LocalPlayer = Players.LocalPlayer
-local PlayerGui = LocalPlayer:WaitForChild("PlayerGui")
+local CoreGui = game:GetService("CoreGui")
 
 -- Icon library
 local Icons = {
@@ -74,10 +72,10 @@ end
 local MirageUI = {}
 
 function MirageUI:Notify(title, content, duration, iconType)
-    local notificationScreen = PlayerGui:FindFirstChild("MirageNotify") or CreateInstance("ScreenGui", {
+    local notificationScreen = CoreGui:FindFirstChild("MirageNotify") or CreateInstance("ScreenGui", {
         Name = "MirageNotify",
         ResetOnSpawn = false,
-        Parent = PlayerGui
+        Parent = CoreGui
     })
 
     local notificationFrame = CreateInstance("Frame", {
@@ -191,7 +189,7 @@ function MirageUI:Window(title)
         Name = "MirageUI",
         ResetOnSpawn = false,
         ZIndexBehavior = Enum.ZIndexBehavior.Sibling,
-        Parent = PlayerGui
+        Parent = CoreGui
     })
 
     -- Toggle button
@@ -335,7 +333,7 @@ function MirageUI:Window(title)
         Size = UDim2.new(0, 180, 0, 12),
         Position = UDim2.new(0, 52, 0, 28),
         BackgroundTransparency = 1,
-        Text = "v2.0",
+        Text = "Leviiiiiiiii",
         TextColor3 = Color3.fromRGB(100, 120, 160),
         TextSize = 10,
         Font = Enum.Font.Gotham,
