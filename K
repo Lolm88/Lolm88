@@ -952,7 +952,6 @@ function MirageUI:Window(title)
     AddCorner(Slider, 10)
     local SliderStroke = AddStroke(Slider, Color3.fromRGB(40, 50, 70))
 
-    -- Icon on the left
     CreateInstance("ImageLabel", {
         Size = UDim2.new(0, 16, 0, 16),
         Position = UDim2.new(0, 10, 0.5, -8),
@@ -975,7 +974,6 @@ function MirageUI:Window(title)
         Parent = Slider
     })
 
-    -- Slider track
     local SliderBar = CreateInstance("Frame", {
         Size = UDim2.new(0, 120, 0, 5),
         Position = UDim2.new(1, -180, 0.5, -2.5),
@@ -1001,11 +999,10 @@ function MirageUI:Window(title)
         Parent = SliderFill
     })
 
-    -- Draggable circle handle
-    local SliderHandle = CreateInstance("Frame", {
+        local SliderHandle = CreateInstance("Frame", {
         Size = UDim2.new(0, 14, 0, 14),
-        Position = UDim2.new((Value - min) / (max - min), -7, 0.5, -7),
-        AnchorPoint = Vector2.new(0, 0.5),
+        Position = UDim2.new((Value - min) / (max - min), 0, 0.5, 0),
+        AnchorPoint = Vector2.new(0.5, 0.5),
         BackgroundColor3 = Color3.fromRGB(100, 150, 255),
         Parent = SliderBar
     })
@@ -1017,8 +1014,7 @@ function MirageUI:Window(title)
     local HandleStroke = AddStroke(SliderHandle, Color3.fromRGB(255, 255, 255))
     HandleStroke.Thickness = 1.5
     HandleStroke.Transparency = 0.8
-
-    -- Value display on the right
+  
     local ValueLabel = CreateInstance("TextLabel", {
         Size = UDim2.new(0, 45, 0, 16),
         Position = UDim2.new(1, -50, 0.5, -8),
@@ -1043,7 +1039,7 @@ function MirageUI:Window(title)
         ValueLabel.Text = tostring(Value)
         
         CreateTween(SliderFill, {Size = UDim2.new(percentage, 0, 1, 0)}, 0.1)
-        CreateTween(SliderHandle, {Position = UDim2.new(percentage, -7, 0.5, -7)}, 0.1)
+        CreateTween(SliderHandle, {Position = UDim2.new(percentage, 0, 0.5, 0)}, 0.1)
         
         if callback then
             callback(Value)
@@ -1089,7 +1085,7 @@ function MirageUI:Window(title)
             ValueLabel.Text = tostring(value)
             local percentage = (value - min) / (max - min)
             CreateTween(SliderFill, {Size = UDim2.new(percentage, 0, 1, 0)}, 0.2)
-            CreateTween(SliderHandle, {Position = UDim2.new(percentage, -7, 0.5, -7)}, 0.2)
+            CreateTween(SliderHandle, {Position = UDim2.new(percentage, 0, 0.5, 0)}, 0.2)
         end,
         Get = function()
             return Value
