@@ -99,7 +99,7 @@ function MirageUI:Notify(title, content, duration, iconType)
         Size = UDim2.new(0, 24, 0, 24),
         Position = UDim2.new(0, 12, 0, 12),
         BackgroundTransparency = 1,
-        Image = Icons[iconType] or Icons.Home,
+        Image = Icons[iconType] or Icons.Bell,
         ImageColor3 = Color3.fromRGB(100, 150, 255),
         Parent = notificationFrame
     })
@@ -209,7 +209,7 @@ function MirageUI:Window(title)
         Size = UDim2.new(0, 20, 0, 20),
         Position = UDim2.new(0.5, -10, 0.5, -10),
         BackgroundTransparency = 1,
-        Image = Icons.Home,
+        Image = Icons.Star,
         ImageColor3 = Color3.fromRGB(100, 150, 255),
         Parent = ToggleButton
     })
@@ -314,7 +314,7 @@ function MirageUI:Window(title)
         Size = UDim2.new(0, 18, 0, 18),
         Position = UDim2.new(0.5, -9, 0.5, -9),
         BackgroundTransparency = 1,
-        Image = Icons.Home,
+        Image = Icons.Star,
         ImageColor3 = Color3.fromRGB(255, 255, 255),
         Parent = Logo
     })
@@ -357,7 +357,7 @@ function MirageUI:Window(title)
         Size = UDim2.new(0, 14, 0, 14),
         Position = UDim2.new(0, 8, 0.5, -7),
         BackgroundTransparency = 1,
-        Image = Icons.Home,
+        Image = Icons.Search,
         ImageColor3 = Color3.fromRGB(100, 120, 160),
         Parent = SearchBox
     })
@@ -392,7 +392,7 @@ function MirageUI:Window(title)
         Size = UDim2.new(0, 14, 0, 14),
         Position = UDim2.new(0.5, -7, 0.5, -7),
         BackgroundTransparency = 1,
-        Image = Icons.Home,
+        Image = Icons.X,
         ImageColor3 = Color3.fromRGB(200, 100, 100),
         Parent = CloseButton
     })
@@ -727,7 +727,7 @@ function MirageUI:Window(title)
                 Size = UDim2.new(0, 18, 0, 18),
                 Position = UDim2.new(0, 12, 0.5, -9),
                 BackgroundTransparency = 1,
-                Image = Icons[buttonIcon] or Icons.Home,
+                Image = Icons[buttonIcon] or Icons.Bolt,
                 ImageColor3 = Color3.fromRGB(100, 150, 255),
                 Parent = Button
             })
@@ -748,7 +748,7 @@ function MirageUI:Window(title)
                 Size = UDim2.new(0, 12, 0, 12),
                 Position = UDim2.new(1, -26, 0.5, -6),
                 BackgroundTransparency = 1,
-                Image = Icons.Home,
+                Image = Icons.Arrow,
                 ImageColor3 = Color3.fromRGB(80, 100, 140),
                 Rotation = -90,
                 Parent = Button
@@ -1094,7 +1094,7 @@ end
                 Size = UDim2.new(0, 18, 0, 18),
                 Position = UDim2.new(0, 12, 0, 11),
                 BackgroundTransparency = 1,
-                Image = Icons[dropdownIcon] or Icons.Home,
+                Image = Icons[dropdownIcon] or Icons.Dropdown,
                 ImageColor3 = Color3.fromRGB(100, 150, 255),
                 Parent = Dropdown
             })
@@ -1127,7 +1127,7 @@ end
                 Size = UDim2.new(0, 12, 0, 12),
                 Position = UDim2.new(1, -26, 0, 14),
                 BackgroundTransparency = 1,
-                Image = Icons.Home,
+                Image = Icons.Arrow,
                 ImageColor3 = Color3.fromRGB(100, 150, 255),
                 Rotation = 90,
                 Parent = Dropdown
@@ -1254,7 +1254,7 @@ end
         Size = UDim2.new(0, 18, 0, 18),
         Position = UDim2.new(0, 12, 0, 11),
         BackgroundTransparency = 1,
-        Image = Icons[multiIcon] or Icons.Home,
+        Image = Icons[multiIcon] or Icons.List,
         ImageColor3 = Color3.fromRGB(100, 150, 255),
         Parent = Dropdown
     })
@@ -1287,7 +1287,7 @@ end
         Size = UDim2.new(0, 12, 0, 12),
         Position = UDim2.new(1, -26, 0, 14),
         BackgroundTransparency = 1,
-        Image = Icons.Home,
+        Image = Icons.Arrow,
         ImageColor3 = Color3.fromRGB(100, 150, 255),
         Rotation = 90,
         Parent = Dropdown
@@ -1439,7 +1439,7 @@ end
                 Size = UDim2.new(0, 16, 0, 16),
                 Position = UDim2.new(0, 8, 0.5, -8),
                 BackgroundTransparency = 1,
-                Image = Icons[inputIcon] or Icons.Home,
+                Image = Icons[inputIcon] or Icons.Search,
                 ImageColor3 = Color3.fromRGB(100, 150, 255),
                 Parent = Input
             })
