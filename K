@@ -1741,7 +1741,7 @@ end
     end
 
     function WindowAPI:Notify(title, content, duration, icon)
-        return self:Notify(title, content, duration, icon)
+    return MirageUI:Notify(title, content, duration, icon)
     end
 
     function WindowAPI:Destroy()
